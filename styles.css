@@ -1,53 +1,107 @@
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f5f5f5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  padding: 30px;
+  color: white;
+}
+
+/* Título */
 h1 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
 }
 
+/* Formulario */
 .form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .form input {
   padding: 10px;
-  width: 180px;
-}
-
-button {
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
   border: none;
-  cursor: pointer;
+  border-radius: 8px;
+  width: 180px;
+  outline: none;
 }
 
+/* Botón */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0072ff;
+  transform: scale(1.05);
+}
+
+/* Contenedor productos */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 20px;
 }
 
+/* Tarjeta */
 .card {
   background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: black;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen */
 .card img {
   width: 100%;
-  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
 }
 
+/* Contenido */
+.card h3 {
+  padding: 10px;
+}
+
+.card p {
+  padding: 0 10px;
+}
+
+.card strong {
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Botón eliminar */
 .delete-btn {
-  background: red;
-  margin-top: 10px;
+  width: 100%;
+  background: crimson;
+  border-radius: 0;
 }
