@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Instrumentos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2>🎵 Instrumentos</h2>
+
+    <div id="auth" class="nav-right">
+      <button onclick="mostrarLogin()">Login</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Explora Instrumentos Musicales</h1>
+    <p>Catálogo con precios y búsqueda</p>
+  </header>
+
+  <!-- BUSCADOR -->
+  <section class="buscador">
+    <input type="text" id="instrumento" placeholder="Buscar instrumento...">
+    <button onclick="buscarInstrumento()">Buscar</button>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section>
+    <div id="resultado" class="grid"></div>
+  </section>
+
+  <!-- MODAL LOGIN -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Iniciar sesión</h3>
+      <input type="text" id="user" placeholder="Usuario">
+      <input type="password" id="pass" placeholder="Contraseña">
+
+      <button onclick="login()">Entrar</button>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
